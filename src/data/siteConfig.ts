@@ -7,10 +7,10 @@ export const siteConfig = {
     logoText: "AR INTERIOR"
   },
   contact: {
-    phone: "+92-300-8247000",
-    phoneReadable: "+92 300 8247000",
+    phone: "+923016159800",
+    phoneReadable: "+923016159800",
     email: "design@arinterior.pk",
-    address: "Suite 402, 4th Floor, Platinum Plaza, Khayaban-e-Ittehad, Phase 6, DHA, Karachi, 75500, Pakistan",
+    address: "University Road, Sargodha, Pakistan",
     shortAddress: "DHA Phase 6, Karachi, Pakistan",
     hours: "Monday – Saturday, 9:00 AM – 7:00 PM"
   },
