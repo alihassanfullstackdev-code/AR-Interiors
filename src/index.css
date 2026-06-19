@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
+
+  --color-primary-dark: #1a1a1a;
+  --color-secondary-dark: #2e2e2e;
+  --color-accent-gold: #d4af37;
+  --color-accent-gold-hover: #e8c84a;
+  --color-accent-gold-dark: #b8960c;
+}
+
+:root {
+  /* Dynamic Palette variables that swap in Light vs Dark modes */
+  --bg-primary: #f8f8f8; /* Off-White */
+  --bg-secondary: #ffffff; /* Pure White */
+  --bg-cream: #f2ede4; /* Warm Cream bg */
+
+  --text-primary: #1a1a1a; /* Charcoal text */
+  --text-secondary: #555555; /* Muted grey description */
+  --text-muted: #999999; /* Light placeholder/caption */
+  --text-white: #ffffff; /* Pure white */
+  --text-gold: #d4af37; /* Luxury Gold */
+
+  --border-primary: #e0e0e0; /* Light split dividers */
+  --border-gold-subtle: rgba(212, 175, 55, 0.2);
+  --overlay-bg: rgba(26, 26, 26, 0.65);
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter", system-ui, sans-serif;
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #111111; /* Extremely dark charcoal */
+  --bg-secondary: #1a1a1a; /* Deep primary dark */
+  --bg-cream: #1e1a14; /* Dark luxury gold/brown undertone */
+
+  --text-primary: #f3f4f6; /* Bright grey text */
+  --text-secondary: #9ca3af; /* Mid charcoal description */
+  --text-muted: #6b7280; /* Muted deep grey */
+  --text-white: #ffffff; /* Pure white */
+  --text-gold: #d4af37; /* Luxury gold */
+
+  --border-primary: #2b2b2b; /* Dark dividers */
+  --border-gold-subtle: rgba(212, 175, 55, 0.35);
+  --overlay-bg: rgba(10, 10, 10, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+/* Custom Utilities & Animations */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-gold);
+}
+
+/* Glassmorphism overlays */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.glass-panel-dark {
+  background: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+/* Custom scrollbar matching luxury profile */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a3a3a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-gold);
+}
+
+/* WhatsApp pulse animations */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(74, 222, 128, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+  }
+}
+
+.pulse-green {
+  animation: pulseGlow 2s infinite;
+}
+
+/* Double column masonry fallback */
+.masonry-container {
+  column-count: 1;
+  column-gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .masonry-container {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .masonry-container {
+    column-count: 3;
+  }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 24px;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "AR Interior",
+  "description": "A luxury interior design portfolio and showcase website for AR Interior, based in Karachi, Pakistan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
