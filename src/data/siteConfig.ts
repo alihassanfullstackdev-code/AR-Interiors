@@ -28,6 +28,6 @@ export const siteConfig = {
     years: "12+",
     awards: "18"
   },
-  whatsapp: "923008247000",
+  whatsapp: "923016159800",
   siteUrl: "https://arinterior.pk"
 };
